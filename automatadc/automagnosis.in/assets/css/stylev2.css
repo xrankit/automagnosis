@@ -1,0 +1,346 @@
+body {
+  font-family: 'Karla', sans-serif;
+}
+.center-v-align {
+  vertical-align: sub;
+}
+.header-top {
+  /* height: 530px; */
+  background-image: linear-gradient(179deg, #0099EF 27%, white 96%);
+}
+.font-covid {
+  font-size: 11px;
+}
+@media only screen and (max-width: 992px) {
+  /* nav .brand-logo {
+    left: 26% !important;
+  } */
+  .mob-width {
+    width: 80%;
+  }
+  .mob-text-align {
+    text-align: center;
+  }
+  .mob-top-margin {
+    margin-top: 16px;
+  }
+  .header-top {
+    /* height: 1000px; */
+    background-image: linear-gradient(179deg, #0099EF 27%, white 96%);
+  }
+  .font-covid {
+    font-size: 9px;
+  }
+  .center-align-mob {
+    text-align: center;
+  }
+  .mob-gold-img {
+    width: 100%;
+  }
+  .arrow-size {
+    vertical-align: middle;
+  }
+  .card-scrollable {
+    display: inline-block;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* .desk-margin {
+    margin-left: 90px !important;
+    margin-right: 90px !important;
+  } */
+  .container {
+    width: 717px;
+  }
+  .gold-card-cont {
+    padding: 46px 60px 20px 58px !important;
+  }
+  .card-scrollable {
+    display: inline-block;
+    width: 49.7%;
+  }
+}
+.font-48 {
+  font-size: 48px;
+}
+.font-7 {
+  font-size: 7px;
+}
+.font-9 {
+  font-size: 9px;
+}
+.font-10 {
+  font-size: 10px;
+}
+.font-11 {
+  font-size: 11px;
+}
+.font-12 {
+  font-size: 12px;
+}
+.font-13 {
+  font-size: 13px;
+}
+.font-14 {
+  font-size: 14px;
+}
+.font-15 {
+  font-size: 15px;
+}
+.font-16 {
+  font-size: 16px;
+}
+.font-18 {
+  font-size: 18px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.font-22 {
+  font-size: 22px;
+}
+.font-24 {
+  font-size: 24px;
+}
+.font-32 {
+  font-size: 32px;
+}
+.bold {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: -1px;
+}
+.bold-2 {
+  font-size: 21px;
+  font-weight: normal;
+  letter-spacing: -0.88px;
+}
+.consult-doc {
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -0.15px;
+  color: #000000;
+}
+.style {
+  background-image: linear-gradient(179deg, #0099EF 27%, white 96%);
+}
+.family-care {
+  font-size: 25px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.04;
+  letter-spacing: -1.04px;
+}
+.unlimited-text-gold {
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.47;
+  letter-spacing: -0.17px;
+  text-align: left;
+  color: #525252;
+}
+.benef-gold {
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: -1px;
+}
+.doc-talk-btn {
+  outline: none !important;
+  color: white;
+  /* width: 204px;
+  height: 30px; */
+  border-radius: 22px;
+  background-color: #0099EF;
+  border: none;
+  padding: 6px 18px 7px 24px;
+}
+.continue-btn {
+  outline: none !important;
+  color: white;
+  border-radius: 22px;
+  background-color: #CBCBCB;
+  border: none;
+  padding: 6px 18px 7px 24px;
+}
+.arrow-size {
+  width: 16px;
+  height: 11px;
+  /* vertical-align: middle; */
+}
+.arrow-span {
+  float: right;
+  padding-left: 10px;
+}
+.talk-doc {
+  width: 310px;;
+}
+.center-align {
+  text-align: center;
+}
+nav ul a {
+  color: black !important;
+}
+.nav-overide {
+  webkit-box-shadow: none !important;
+  box-shadow: none;
+  background-color: #0099EF;
+}
+.gold-img {
+  width: 204px;
+}
+.bold-font {
+  font-weight: bold;
+}
+.gold-buy-btn {
+  outline: none !important;
+  color: black;
+  border-radius: 22px;
+  background-color: #0099EF;
+  border: none;
+  padding: 6px 18px 7px 24px;
+  background-image: linear-gradient(to bottom, #4FC0FF, #0099EF);
+}
+.grey-col {
+  color: #848484;
+}
+.gold-back-span {
+  padding: 5px;
+  background-color: #4FC0FF;
+  line-height: 0.75;
+  letter-spacing: -0.28px;
+}
+.right-align {
+  text-align: right;
+}
+.left-align {
+  text-align: left !important;
+}
+.vertical-line{
+  width: 1px; /* Line width */
+  background-color: black; /* Line color */
+  height: 100%; 
+}
+.card-height {
+  border-radius: 5px;
+  height: 158px;
+  box-shadow: 0 0 20px 0 #e8e8e8;
+}
+.view-more {
+  outline: none !important;
+  color: white;
+  border-radius: 22px;
+  background-color: #3aaef1;
+  border: none;
+  padding: 6px 18px 7px 24px;
+}
+@media screen and (min-width:1025px) {
+  #footer .container {
+    width: 95vw;
+  }
+}
+
+#footer .s6  a {
+  font-size: 8px;
+  font-weight: 900;
+  color: #000000;        
+}
+
+#footer .col  a {
+  font-size: 8px;;
+  color: #000;        
+}
+#footer .col  h6 {
+  font-size: 15px;
+  color: #000;        
+}
+
+#footer .s12  a {
+  font-size: 8px;
+  font-weight: 400;
+  color: #000;
+}
+
+#footer h6 {
+  font-weight: 900;
+}
+.footerlinks {
+  color: black;
+}
+.blue-col {
+  color: #5225B4;
+}
+.covid-card {
+  background-color: #DFDADE;
+  border-radius: 8px;
+  box-shadow: none;
+}
+a {
+  color: black;
+}
+.zero-botom {
+  margin-bottom: 0px;
+}
+.mob-input-width {
+  width: 200px;
+}
+/* ul:not(.browser-default) > li  {
+  list-style-type: disc;
+} */
+.footer-mob {
+  background-color: #0099EF;
+}
+.collapsible-header {
+  /* display: inline !important; */
+  background-color: #1da9fa;
+}
+.span-footer {
+  margin-right: 14px;
+  font-size: 12px;
+}
+.left-pad-icon {
+  padding-left: 70%;
+}
+h6 {
+  margin-bottom: 2px !important;
+}
+.child-1 {
+  margin-left: auto;
+  order: 2;
+}
+.splashLoader {
+  position: fixed;
+  top: 30%;
+  background-image: linear-gradient(179deg, #0099EF 27%); 
+  z-index: 100;
+  width: 100%;
+}
+.desk-down-img {
+  margin-bottom: -6px;
+}
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.card-scrollable {
+  display: inline-block;
+  margin-top: -15px;
+  margin-right: 10px;
+}
+.banner-home-img {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+}

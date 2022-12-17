@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="16px" viewBox="0 0 42 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group 19</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F6D103" offset="0%"></stop>
+            <stop stop-color="#EAB000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="24.9194267%" y1="47.7799559%" x2="63.896287%" y2="52.0465214%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.4" offset="50.7543886%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-3" x="0" y="0" width="42" height="16" rx="8"></rect>
+    </defs>
+    <g id="Website-Menus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-19">
+            <g id="Rectangle">
+                <use fill="url(#linearGradient-1)" xlink:href="#path-3"></use>
+                <use fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+            </g>
+            <text id="Gold" font-family="Karla-BoldItalic, Karla" font-size="10" font-style="italic" font-weight="bold" fill="#2B2B2B">
+                <tspan x="16" y="11">Gold</tspan>
+            </text>
+            <path d="M12.3,6.80044807 L10.2,6.80044807 L10.2,4.70011202 C10.2,4.31365018 9.8864,4 9.5,4 C9.1136,4 8.8,4.31365018 8.8,4.70011202 L8.8,6.80044807 L6.7,6.80044807 C6.3136,6.80044807 6,7.11297808 6,7.49943991 C6,7.88702192 6.3136,8.19955193 6.7,8.19955193 L8.8,8.19955193 L8.8,10.299888 C8.8,10.6863498 9.1136,11 9.5,11 C9.8864,11 10.2,10.6863498 10.2,10.299888 L10.2,8.19955193 L12.3,8.19955193 C12.6864,8.19955193 13,7.88702192 13,7.49943991 C13,7.11297808 12.6864,6.80044807 12.3,6.80044807 Z" id="Path" fill="#2B2B2B" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,654 @@
+/*
+colors constant
+*/
+.bg-green {
+    background-color: #f5fffd;
+  }
+  
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  .bg-grey {
+    background-color: #f8f8f8;
+  }
+  
+  .bg-dark-green {
+    background-color: #30373b;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .pad-75 {
+    padding-bottom: 75px;
+  }
+  
+  .title-space {
+    padding: 20px 0 50px;
+  }
+  
+  h2 {
+    color: #4c4c4c;
+  }
+  
+  .left {
+    float: left;
+  }
+  
+  .right {
+    float: right;
+  }
+  
+  *[class^=sprite-special-] {
+    margin-bottom: 20px;
+  }
+  
+  * {
+    outline: none;
+  }
+  
+  body.theme-green .simple-text a:hover {
+    color: #03aa85;
+  }
+  
+  .pageHeader {
+    background: #03A62C;
+    padding: 10px;
+  }
+  .pageHeader .banner {
+    /* height: 20px; */
+    margin: 10px auto;
+  }
+  .pageHeader .banner .banner-title {
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+  }
+  .pageHeader .banner .banner-cta {
+    text-align: right;
+  }
+  
+  .getApp, .getApp:hover, .getApp:focus, .getApp:active {
+    background: #5224B4;
+    color: #ffffff;
+    padding: 10px 15px;
+    display: inline;
+  }
+  .getApp-round {
+    border-radius: 20px !important;
+    vertical-align: -webkit-baseline-middle !important;
+  }
+  .header-content {
+    padding: 0 10px;
+  }
+  
+  .app-tray .app-image {
+    width: 225px;
+  }
+  .app-tray .app-description {
+    margin: 10px 0;
+    width: 100%;
+    padding: 5px 10px;
+  }
+  .app-tray .app-description h5 {
+    font-weight: 900;
+    line-height: 30px;
+  }
+  .app-tray .app-description p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .app-tray #phone {
+    background: url(../website_assets/main-page/phone_Final.png);
+    background-repeat: no-repeat;
+    width: 315px;
+    height: 500px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 48px 0 48px;
+  }
+  .app-tray #phone .phone-content {
+    height: 400px;
+    margin-top: -22px;
+  }
+  .app-tray #myCarousel .carousel-indicators {
+    position: relative;
+    bottom: 10px;
+    left: 0;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: unset;
+    width: 80%;
+  }
+  .app-tray #myCarousel .carousel-indicators .active {
+    height: auto;
+    box-shadow: 0 0 5px #727272;
+    border-radius: 5px;
+  }
+  .app-tray #myCarousel .carousel-indicators .active h5 {
+    color: #03aa85;
+  }
+  
+  .doc-tray .carousel .carousel-indicators li {
+    background-color: #bbbbbb;
+  }
+  .doc-tray .carousel .carousel-indicators li.active {
+    background-color: #3b3b3b;
+  }
+  .doc-tray .doctor-card .name, .doc-tray .doctor-card .edu {
+    color: #4c4c4c;
+  }
+  .doc-tray .doctor-card .name {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .doc-tray .doctor-card .name a {
+    color: #4c4c4c;
+  }
+  .doc-tray .doctor-card .edu, .doc-tray .doctor-card .exp {
+    font-size: 10px;
+  }
+  .doc-tray .doctor-card .description {
+    color: #ffd73c;
+    margin: 5px 0;
+  }
+  .doc-tray .doctor-card .description .material-icons {
+    font-size: 16px;
+  }
+  .doc-tray .doctor-card .name, .doc-tray .doctor-card .edu {
+    line-height: 20px;
+  }
+  .doc-tray .doctor-card .doc-image {
+    width: 65px;
+    height: auto;
+    border-radius: 50px;
+    text-align: center;
+  }
+  .doc-tray .doctor-card .logo-cont {
+    margin-top: 10px;
+  }
+  .doc-tray .doctor-card .logo-cont img {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+  }
+  .doc-tray .item .doctor-card {
+    border: 1px solid #03aa85;
+    border-radius: 10px;
+    min-height: 150px;
+    padding-top: 25px;
+    padding-left: 20px;
+  }
+  
+  .select-tray .tile-card, .privacy-tray .tile-card {
+    text-align: center;
+  }
+  .select-tray .tile-card .tile-content, .privacy-tray .tile-card .tile-content {
+    line-height: 30px;
+    font-weight: 600;
+  }
+  .select-tray .tile-card p, .privacy-tray .tile-card p {
+    color: #727272;
+    margin: 0 auto;
+    line-height: 18px;
+    font-size: 14px;
+  }
+  .select-tray .tile-image img, .privacy-tray .tile-image img {
+    height: 70px;
+  }
+  
+  .founders-tray .shadow {
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 300px;
+  }
+  .founders-tray .shadow .f-pic {
+    width: 65px;
+    border-radius: 100px;
+    margin-top: 10px;
+  }
+  .founders-tray .shadow a img {
+    height: 20px;
+    margin-right: 10px;
+  }
+  .founders-tray .shadow .f-info {
+    margin: 10px;
+  }
+  .founders-tray .shadow .f-info .name {
+    font-weight: 900;
+  }
+  .founders-tray .shadow .f-info .position, .founders-tray .shadow .f-info .college {
+    font-size: 10px;
+  }
+  .founders-tray .shadow .f-info .name, .founders-tray .shadow .f-info .position, .founders-tray .shadow .f-info .college {
+    line-height: 20px;
+  }
+  .founders-tray .shadow .f-description {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .blogs-tray .shadow {
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+  .blogs-tray .shadow .b-pic {
+    width: 100%;
+    height: 200px;
+  }
+  .blogs-tray .shadow .b-doc img {
+    width: 50px;
+    border-radius: 25px;
+  }
+  .blogs-tray .shadow .b-doc .name {
+    color: #03aa85;
+    font-size: 12px;
+  }
+  .blogs-tray .shadow .b-doc .date {
+    font-size: 10px;
+    color: #858585;
+  }
+  .blogs-tray .shadow .b-social {
+    width: 20px;
+    margin: 10px 0;
+  }
+  .blogs-tray .shadow .left .right {
+    margin-left: 12px;
+  }
+  .blogs-tray .shadow .c-h4 {
+    padding-bottom: 10px;
+  }
+  
+  .col-sm-6 {
+    padding: 10px 15px;
+  }
+  
+  .tt-sticky-redirect{
+    position: -webkit-sticky;
+    position: fixed;
+    background-color: #ef6f56;
+    height: 38px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    float: right;
+    text-align: center;
+    padding: 5px 40px;
+    bottom: 2px;
+    right: 2px;
+  }
+  
+  .tt-slide-2-btn a{
+    margin-right:15px;
+  }
+  
+  .tt-redirect-footer-container{
+    margin-top: 40px;
+    margin-right: 110px;
+    font-family: Roboto;
+    font-size: 12px;
+    color: #fafafa;
+    text-align: center;
+  }
+  
+  .tt-redirect-footer{
+    height: 40px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    background-color: #ef6f56;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  
+  
+  @media only screen and (max-width: 767px) {
+    .title-space {
+      padding: 5px 0 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .pad-75 {
+      padding-bottom: 25px;
+    }
+  
+    h2.center {
+      font-size: 18px;
+    }
+  
+    .col-xs-12 {
+      padding: 10px 15px;
+    }
+  
+    .app-tray .app-description {
+      width: 100%;
+      text-align: center;
+    }
+    .app-tray .app-description p {
+      width: 70%;
+      margin: 0 auto;
+    }
+    .app-tray #myCarousel .carousel-indicators {
+      width: 100%;
+    }
+    .app-tray .app-image {
+      padding: 30px 0 0;
+    }
+  
+    .doc-tray .pad-75 {
+      padding-bottom: 75px;
+    }
+    .doc-tray .doctor-card .description {
+      width: 100%;
+    }
+    .doc-tray .doctor-card .col-xs-9 {
+      padding-left: 30px;
+    }
+  
+    .founders-tray .shadow {
+      width: 100%;
+    }
+    .founders-tray .shadow .col-xs-9 {
+      padding-left: 30px;
+    }
+  
+    .pageHeader {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    .pageHeader .banner .banner-title {
+      font-size: 11px;
+      text-align: left;
+    }
+    .pageHeader .banner .banner-cta {
+      margin-top: 4px;
+      text-align: center;
+    }
+
+    .col-xs-7 {
+        width: 50% !important;
+    }
+
+    .col-xs-5 {
+        width: 50% !important;
+    }
+    .mobileMenu {
+        position: fixed;
+        top: 16px;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width:100%;
+        transform: translate(-100%);
+        transition: all ease 0.25s;
+    }
+    button:focus {
+        outline: none; 
+        outline: none;
+        border-color:none;
+    }
+    .navbar-light .navbar-toggler {
+        /* color: rgba(0,0,0,.5); */
+        border-color: white;
+    }
+    .Rectangle {
+        padding-left: 11px;
+    }
+    .ndisp {
+        display: inline;
+    }
+    .ndisp2 {
+        display: none;
+    }
+    .Download-the-App {
+        width: 90%;
+        height: 66px;
+        /* font-family: Karla; */
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #03aa85;
+        margin: 10px;
+        border-radius: 4.5px;
+        background-color: #f2f5f3;
+        text-align: left;
+    }
+    /* .container-fluid {
+        height: 4.5rem;
+    } */
+    .navbar-brand {
+        margin-top: 0.24rem;
+    }
+    .header {
+        position: fixed;
+        width: 100%;
+        z-index: 101;
+    }
+    .mobile-nav-height {
+        height: 4.4rem;
+    }
+    .select-pad-hide {
+        padding-top: none;
+    }
+    .header-margin-2 {
+      height: 180px;
+    }
+    .centered {
+      font-size: 16px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .app-tray .app-description {
+      width: 90%;
+    }
+    .app-tray #myCarousel .carousel-indicators {
+      width: 100%;
+    }
+  
+    .col-xs-12 {
+      padding: 10px 15px;
+    }
+  
+    .founders-tray .shadow {
+      width: 100%;
+    }
+  
+    .doc-tray .doctor-card .description {
+      width: 100%;
+    }
+    .doc-tray .doctor-card .doc-image {
+      width: 50px;
+    }
+  
+    .select-tray .tile-card p {
+      width: 90%;
+    }
+  
+    .pageHeader {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+    .pageHeader .banner .banner-title {
+      font-size: 12px;
+      text-align: left;
+    }
+    .pageHeader .banner .banner-cta {
+      margin-top: 5px;
+      text-align: right;
+    }
+    .mobileMenu {
+        position: fixed;
+        top: 16px;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width:100%;
+        transform: translate(-100%);
+        transition: all ease 0.25s;
+    }
+    .button:focus {
+        outline: none; 
+        outline: none;
+    }
+    .Rectangle {
+        padding-left: 4px;
+    }
+    .ndisp {
+        display: inline;
+    }
+    .ndisp2 {
+        display: none;
+    }
+    .Download-the-App {
+        width: 90%;
+        height: 57px;
+        /* font-family: Karla; */
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #03aa85;
+        margin: 10px 0;
+        border-radius: 4.5px;
+        background-color: #f2f5f3;
+        text-align: left;
+    }
+    .select-pad-hide {
+        padding-top: 1.1em;
+    }
+    .centered {
+      font-size: 30px;
+    }
+  }
+  @media only screen and (min-width: 993px) and (max-width: 1199px) {
+    .pageHeader {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .pageHeader .banner .banner-title {
+      font-size: 14px;
+      text-align: left;
+    }
+    .pageHeader .banner .banner-cta {
+      margin-top: 5px;
+      text-align: right;
+    }
+    .select-pad-hide {
+        padding-top: 1.1em;
+    }
+    
+  } 
+
+  @media only screen and (min-width: 1199px) {
+    #navbarNavDropdown {
+        padding-top: 14px;
+    }
+
+    .navbar-default {
+        background: white;
+        height: 80px;
+        border: none;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+    }
+
+    .navbar-header {
+        padding-top: 8px;
+    }
+    .Rectangle {
+        padding-left: 4px;
+    }
+    .ndisp {
+        display: none;
+    }
+    .ndisp2 {
+        display: inline;
+    }
+    .Download-the-App {
+        width: 200px;
+        height: 53px;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #03aa85;
+        border-radius: 4.5px;
+        background-color: #f2f5f3;
+        text-align: left;
+        padding-top: 0.25rem;
+    }
+    .list-pad {
+        padding-top: 1.0rem;
+    }
+    
+    .top-pad {
+        padding-top: 1.4rem;
+    }
+    .nav-link {
+        padding-top: 0.5rem;
+    }
+    .dropdown {
+        padding-top: 0.5rem;
+    }
+    .select-pad-hide {
+        padding-top: 1.1em;
+    }
+    .centered {
+      font-size: 40px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023) {
+      .download-hide-btn {
+          display: none !important;
+      }
+  }
+
+  .dropdown-img {
+      width: 10px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .gold_strip_btn {
+      padding-top: 20px;
+      padding-right: 5px;
+    }
+    .gold_strip_p{
+      padding-right: 5px;
+    }
+  }
+
+  
+  
+  /*# sourceMappingURL=index.css.map */
+  

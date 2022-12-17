@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- <meta http-equiv="Pragma" content="no-cache"> -->
+  <meta charset="UTF-8" />
+  <title>automagnosis - Doctor Consultation App</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <!-- jquery -->
+  <script src="../code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" /> 
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="../cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Karla&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/stylev3.css" />
+  <link rel="stylesheet" href="assets/css/stylev2.css" />
+
+  <link rel="canonical" href="index.html" />
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          '../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MXP5LMK');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- clevertap intitialization -->
+  <script type="text/javascript">
+    var clevertap = { event: [], profile: [], account: [], onUserLogin: [], notifications: [], privacy: [] };
+   
+    clevertap.account.push({ "id": "6Z6-974-R84Z" });
+    clevertap.privacy.push({ optOut: false }); 
+    clevertap.privacy.push({ useIP: false }); 
+    (function () {
+      var wzrk = document.createElement('script');
+      wzrk.type = 'text/javascript';
+      wzrk.async = true;
+      wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wzrk, s);
+    })();
+    // clevertap.event.push("Mweb Test");
+  </script>
+
+  <style>
+    .container {
+      display: none;
+    }
+
+    .footer-mob {
+      display: none;
+    }
+
+    .header-top {
+      background-image: linear-gradient(179deg, #0099EF 27%, white 96%);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="splashLoader show center-align">
+    <img src="assets/images/favicon.gif" width="100px" />
+    <div class='text-center'>Consult top MD doctors from the comfort of your home.</div>
+  </div>
+
+<div style="background-image: url('assets/images/newDesign/background-image.png');"> 
+  <div class="header-top" >
+    <div class="container">
+      <nav class="nav-overide">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo"> <img class="center-v-align mob-width"
+            src="assets/images/newDesign/docsapp_gold.png" alt=""> </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <img class="center-v-align mob-width" src="assets/images/newDesign/noun_menu.svg" alt="">
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a class="modal-trigger bold-font" data-target="inputSlider"
+                onclick='stickyBtnClick("3.1", "consult");postEvent({eventName:"nav_consultNow_button1"})'>Consult
+                Doctor</a></li>
+            <li class="socialLinks"><a class="bold-font" href="https://www.1mg.com/">Medicines</a>
+            </li>
+            <li class="socialLinks"><a class="bold-font"
+                href="https://www.lalpathlabs.com/">Labs</a>
+            </li>
+            <li><a class="bold-font" class="modal-trigger" data-target="inputSlider"
+                onclick='stickyBtnClick("3.1", "gold");postEvent({eventName:"nav_gold_button1"})'>ADC</a></li>
+       
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <div style="height: 20px;"></div>
+            <li><a class="modal-trigger bold-font" data-target="inputSlider"
+                onclick='stickyBtnClick("3.1", "consult");postEvent({eventName:"nav_consultNow_button1"})'>Consult
+                Doctor</a></li>
+            <li class="socialLinks"><a class="bold-font" href="https://www.1mg.com/">Medicines</a>
+            </li>
+            <li class="socialLinks"><a class="bold-font"
+                href="https://www.lalpathlabs.com/">Labs</a>
+            </li>
+            <li><a class="bold-font" class="modal-trigger" data-target="inputSlider"
+                onclick='stickyBtnClick("3.1", "gold");postEvent({eventName:"nav_gold_button1"})'>ADC</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+
+      <br><br>
+      <!-- <div> -->
+      <div class="container socialLinks">
+        <div class="row desk-margin">
+          <div class="col s12 m12">
+            <img class=" desktop banner-home-img "
+                src="assets/images/mediBuddyWebBanner.png" alt=""></a>
+
+            <img class=" mobile banner-home-img "
+                src="assets/images/mediBuddyMobileBanner.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m6 l6 mob-text-align">
+          <br><br>
+          <div class="font-24 bold">
+            Talk to Specialist Doctors online
+          </div>
+          <div class="bold-2">
+            on Private Chat & Call, 24x7
+          </div>
+          <div style="height: 8.5px;"></div>
+          <div class="consult-doc">
+            Consult Doctors from Top Hospitals within 30 minutes
+          </div>
+          <div style="height: 26.5px;"></div>
+          <button id='mainbtn' class="doc-talk-btn modal-trigger" data-target="inputSlider"
+            onclick='stickyBtnClick("3.1", "consult");postEvent({eventName:"Talk_to_doc_button1"})'>
+            <span class="font-15 bold-font"> Talk to Doctor </span>
+            <span class="arrow-span"> <img class="arrow-size" src="assets/images/newDesign/white_arrow.svg" alt="">
+            </span>
+          </button>
+        </div>
+        <br>
+        <p></p>
+        <div class="col s12 m6 l6">
+          <div class="center-align" style="line-height: 0;">
+            <img id="header-img" class="talk-doc" src="#" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+
+      <!-- Scrollable banners component -->
+      <div class="row scrolling-wrapper socialLinks" style="margin-top: -20px;margin-bottom: 0px;">
+        <div class="">
+          <div class="card-scrollable">
+            <img class="banner-home-img " src="assets/images/test/Banner_01.png" alt="">
+          </div>
+          <div class="card-scrollable">
+            <img class="banner-home-img " src="assets/images/test/Banner_02.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="container">
+    <div class="row desk-margin">
+      <div class="col s12 m12">
+        <div id="gold-card-margin" class="card" style="box-shadow: 0 0 20px 0 #e8e8e8;border-radius: 5px;">
+          <div class="card-content gold-card-cont">
+            <div class="row">
+              <div class="col s12 m6 l6">
+                <div>
+                  <img class="gold-img" src="assets/images/newDesign/docsapp_gold.png" alt="" width="206.6px">
+                </div>
+                <div style="height: 19.5px;"></div>
+                <div class="family-care">
+                  Give your family the care they deserve
+                </div>
+                <div style="height: 15px;"></div>
+                <div class="unlimited-text-gold">
+                  Unlimited consultations with Top doctors for your entire family.
+                </div>
+                <br><br>
+                <div class="center-align-mob">
+                  <picture>
+                    <source srcset="assets/images/newDesign/family.webp" type="image/webp">
+                    <img src="assets/images/newDesign/family.png" alt="" width="100%">
+                  </picture>
+                </div>
+                <br>
+                <div class="center-align-mob">
+                  <button class="gold-buy-btn modal-trigger mob-gold-img" data-target="inputSlider"
+                    onclick='stickyBtnClick("3.1", "gold");postEvent({eventName:"gold_button1"})'>
+                    <span class="bold-font"> Login with Phonenumber</span>
+                    <span class="arrow-span"> <img class="arrow-size" src="assets/images/newDesign/black-arrow.svg"
+                        alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="col s12 m6 l6">
+                <div class="mob-top-margin benef-gold">
+                  Benefits of <b> Automate Diagnosis </b>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col s3">
+                    <img src="assets/images/newDesign/gold_img_1.svg" alt="" width="60px">
+                  </div>
+                  <div class="col s9">
+                    <div class="font-14"> <span class="gold-back-span"><b> Unlimited Free Consultations </b></span>
+                    </div>
+                    <div class="font-13 grey-col" style="margin-top: 8px;">Get unlimited free consultations with all
+                      doctors at any time</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s3">
+                    <img src="assets/images/newDesign/gold_img_2.svg" alt="" width="60px">
+                  </div>
+                  <div class="col s9">
+                    <div class="font-14" style="padding-top: 6px;"> <span class="gold-back-span"><b> Free For All
+                          Health
+                          Problems </b></span></div>
+                    <div class="font-13 grey-col" style="margin-top: 8px;">Consult with any doctor from 18 departments
+                      at any time</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s3">
+                    <img src="assets/images/newDesign/gold_img_3.svg" alt="" width="60px">
+                  </div>
+                  <div class="col s9">
+                    <div class="font-14" style="padding-top: 6px;"> <span class="gold-back-span"><b> Free For Full
+                          Family </b></span></div>
+                    <div class="font-13 grey-col" style="margin-top: 8px;"> Free consultations for upto 6 family
+                      members
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s3">
+                    <img src="assets/images/newDesign/gold_img_4.svg" alt="" width="60px">
+                  </div>
+                  <div class="col s9">
+                    <div class="font-14" style="padding-top: 6px;"> <span class="gold-back-span"><b> One Time Yearly
+                          Fee
+                        </b></span></div>
+                    <div class="font-13 grey-col" style="margin-top: 8px;"> Pay once Rs. 1999 once for entire year
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s3">
+                    <img src="assets/images/newDesign/gold_img_5.svg" alt="" width="60px">
+                  </div>
+                  <div class="col s9">
+                    <div class="font-14" style="padding-top: 6px;"> <span class="gold-back-span"><b> Video
+                          Consultations
+                        </b></span></div>
+                    <div class="font-13 grey-col" style="margin-top: 8px;"> Free for entire year </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div style="height: 20px;"></div>
+    <!-- labs and meds card -->
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="row">
+          <div class="col s6">
+            <br>
+            <div class="right-align"> <img src="assets/images/newDesign/meds-img.svg" alt="" width="130px"> </div>
+          </div>
+          <div class="col s6">
+            <br>
+            <div class="font-18"><b> Medicines </b></div>
+            <div class="font-14"> At your doorstep </div>
+            <div class="font-10"> Get 15% Discounts on Medicines. </div>
+            <br>
+            <div class="text-ex socialLinks">
+              <a href="https://www.1mg.com/">
+                <img src="assets/images/newDesign/meds-buy-now.svg" alt="" width="100px">
+              </a>
+            </div>
+            <div class="text-ex socialLinks" style="padding-left: 15px;"> <a
+                href="https://www.1mg.com/"><img src="assets/images/newDesign/view-dir.svg" alt=""
+                  width="70px"> </a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="row">
+          <div class="col s6">
+            <br>
+            <div class="right-align"> <img src="assets/images/newDesign/labs-img.svg" alt="" width="140px"> </div>
+          </div>
+          <div class="col s6">
+            <br>
+            <div class="font-18"><b> Health Checkup & Lab Tests </b></div>
+            <div class="font-10"> Get 50% Discounts on Lab Tests. </div>
+            <br>
+            <div class="socialLinks">
+              <img src="assets/images/newDesign/labs-book-now.svg" alt="" width="100px"> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- banner -->
+
+    <br>
+    <!-- specialities -->
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="font-24"><b> Consult in Top specialities </b></div>
+      </div>
+      <div class="col s12">
+        <div class="row">
+          <div class="col s6 m3">
+            <a class="seolinks" href="https://www.medibuddy.in/doctors/online-consultation/generalphysician">
+              <div class="card card-height">
+                <div class="card-content center-align">
+                  <div> <img src="assets/images/topic/topicda_2.svg" alt=""> </div>
+                  <div> General Physician </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col s6 m3">
+            <a class="seolinks" href="https://www.medibuddy.in/doctors/online-consultation/dermatologist">
+              <div class="card card-height">
+                <div class="card-content center-align">
+                  <div> <img src="assets/images/topic/topicda_3.svg" alt=""> </div>
+                  <div> Skin Problems </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col s6 m3">
+            <a class="seolinks" href="https://www.medibuddy.in/doctors/online-consultation/sexologist">
+              <div class="card card-height">
+                <div class="card-content center-align">
+                  <div> <img src="assets/images/topic/topicda_4.svg" alt=""> </div>
+                  <div> Sexual Problems </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col s6 m3">
+            <a class="seolinks" href="health/trichology.html">
+              <div class="card card-height">
+                <div class="card-content center-align">
+                  <div> <img src="assets/images/topic/topicda_6.svg" alt=""> </div>
+                  <div> Hair and Scalp Problems </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12">
+        <div class="center-align socialLinks">
+          <a href="health/allSpecialities.html"><button class="view-more"> View More </button></a>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <!-- how online consultation works  -->
+    <div class="row">
+      <div class="col s12">
+        <div class="font-24"><b> How online consultation works? </b></div>
+        <div class="font-12"><b> For Better Features & Experience </b></div>
+          <ul class="browser-default" style="padding-inline-start: 20px;">
+            <li> Consult a Doctor over chat/call instantly </li>
+            <li> Private and Secure consultations </li>
+            <li> Talk to the Doctor in your Language </li>
+            <li> Symptoms covered over 20+ Specialities </li>
+            <li> Get Discounts on labs and medicines </li>
+          </ul>
+          <br>
+          <div>
+        <br>
+        <div>
+          <picture>
+            <source srcset="assets/images/optimized/online-consu-img.webp" type="image/webp">
+            <img src="assets/images/newDesign/online-consu-img.png" alt="" width="100%">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="font-24"><b> Why Choose <span class="blue-col">ADC?</span> </b></div>
+        <!-- <br> -->
+        <div>
+          <picture>
+            <source srcset="assets/images/optimized/Group-54797_2x.webp" type="image/webp">
+            <img src="assets/images/newDesign/Group%2054797%402x.png" alt="" width="100%" style="margin-left: -12px;">
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <!-- numbers treated -->
+    <div class="row">
+      <div class="col s12">
+        <div>
+          <picture>
+            <source srcset="assets/images/optimized/Group-54796_2x.webp" type="image/webp">
+            <img src="assets/images/newDesign/Group%2054796%402x.png" alt="" width="100%">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="desktop">
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <div class="input_cntnr1">
+          <div style="text-align: right;"><img onclick="closeModal('loginModal')"
+              src="assets/images/newDesign/close-img.svg" alt="" style="cursor: pointer;width: 10px;"></div>
+          <br><br>
+          <div class="row zero-botom">
+            <div class="col s5">
+              <div><img src="assets/images/newDesign/popup-img.svg" alt="" width="100%"></div>
+            </div>
+            <div class="col s7">
+              <div class="font-20 grey-col"> Welcome! </div>
+              <div class="font-20"><b> Sign in to continue </b></div>
+              <div class="input-field">
+                <input placeholder="Enter Mobile number" id="mobNum" type="number">
+                <!-- <label for="first_name">First Name</label> -->
+              </div>
+              <button class="loginBtn continue-btn">
+                <span class="font-15"> Continue </span>
+                <span class="arrow-span"> <img class="arrow-size" src="assets/images/newDesign/white_arrow.svg" alt="">
+                  <div class="loader hide">Loading...</div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="input_cntnr2">
+          <h4 class="text-center">OTP Verification</h4>
+          <div class="row no-pad-mar">
+            <div class="col l12 text-center">
+              <div class="greenTxt mobNum">+91-<mob></mob> &nbsp;<i onclick="showMobCntnr()"
+                  class="material-icons">create</i></div>
+            </div>
+            <div class="col l12 no-pad-mar text-center">One time password(OTP) sent via SMS</div>
+            <div class="col s12 no-pad-mar text-center">
+              <div class="greenTxt fs12" style="padding-bottom:30px">Enter 4 digit OTP</div>
+            </div>
+            <div class="col l2 no-pad-mar text-center"></div>
+            <div class="col l8 no-pad-mar text-center">
+              <div class="row">
+                <div class=" col s10">
+                  <div class="input-field">
+                    <input id="otp" type="number" onkeyup="watchInput(this)"
+                      onblur="postEvent({eventName:'otp_field'});">
+                    <label for="otp">Enter OTP</label>
+                  </div>
+                </div>
+                <div class="col s2 no-pad-mar text-center">
+                  <timer></timer>
+                </div>
+                <div class="col s12">
+                  <button class="otpBtn submitOtp">Submit
+                    <div class="loader hide">Loading...</div>
+                  </button>
+                  <button class="otpBtn resendOtp" disabled>Resend OTP</button>
+                </div>
+              </div>
+            </div>
+            <div class="col l2 no-pad-mar text-center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" style="background-color:#4FC0FF;">
+      <br>
+      <div class="container" style="color:#000; font-size: 15px;max-width: 1240px;">
+        <div class="row" style="border-bottom:1px solid #fff;">
+          <div class="col s4 m1">
+            <h6 class="left-align" style="color:#000">ADC</h6>
+            <a class="footerlinks" href="health/about.html">About us</a><br>
+            <a class="footerlinks" href="index.html#news">Press</a><br>
+            <a class="footerlinks" href="https://docsapp.recruiterbox.com/">Careers</a><br>
+            <a class="footerlinks" href="webviews/FAQMobile/index.html">FAQ</a><br>
+            <a class="footerlinks" href="health/patient-reviews.html">Patient Reviews</a><br><br>
+          </div>
+          <div class="col s8 col m2">
+            <h6 class="left-align" style="color:#000;">Service by City</h6>
+            <div class="row">
+              <div class="col s6 m4">
+                <a class="footerlinks" href="health/bangalore.html" itemscope=""
+                  itemtype="https://schema.org/City"><span itemprop="name">Bangalore</span></a><br>
+                <a class="footerlinks" href="health/delhi.html" itemscope=""
+                  itemtype="https://schema.org/City"><span itemprop="name">Delhi</span></a><br>
+                <a class="footerlinks" href="health/chennai.html" itemscope=""
+                  itemtype="https://schema.org/City"><span itemprop="name">Chennai</span></a><br>
+                <a class="footerlinks" href="health/hyderabad.html" itemscope=""
+                  itemtype="https://schema.org/City"><span itemprop="name">Hyderabad</span></a><br>
+                <a class="footerlinks" href="health/mumbai.html" itemscope=""
+                  itemtype="https://schema.org/City"><span itemprop="name">Mumbai</span></a><br>
+                <a class="footerlinks" href="health/kolkata.html" itemscope=""
+                  itemtype="https://schema.org/City"><span itemprop="name">Kolkata</span></a><br>
+              </div>
+              <div class="col s6 m8">
+                <a class="footerlinks" href="health/pune.html" itemscope=""
+                  itemtype="https://schema.org/City"><span itemprop="name">Pune</span></a><br>
+                <a class="footerlinks" href="health/lucknow.html" itemscope=""
+                  itemtype="https://schema.org/City"><span itemprop="name">Lucknow</span></a><br>
+                <a class="footerlinks" href="health/indore.html" itemscope=""
+                  itemtype="https://schema.org/City"><span itemprop="name">Indore</span></a><br>
+                <a class="footerlinks" href="health/jaipur.html" itemscope=""
+                  itemtype="https://schema.org/City"><span itemprop="name">Jaipur</span></a><br>
+                <a class="footerlinks" href="health/ahmedabad.html" itemscope=""
+                  itemtype="https://schema.org/City"><span itemprop="name">Ahmedabad</span></a><br>
+                <a class="footerlinks" href="#"><span>View All</span></a><br><br>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m3">
+            <h6 class="left-align" style="color:#000;">Service by Speciality</h6>
+            <div class="row">
+              <div class="col col s6 m4">
+                <a class="footerlinks" href="https://www.medibuddy.in/doctors/online-consultation/sexologist">Sexology</a><br>
+                <a class="footerlinks" href="https://www.medibuddy.in/doctors/online-consultation/dermatologist">Dermatology</a><br>
+                <a class="footerlinks" href="https://www.medibuddy.in/doctors/online-consultation/gynecologist">Gynecology</a><br>
+                <a class="footerlinks" href="https://www.medibuddy.in/doctors/online-consultation/gastroenterologist">Gastroenterology</a><br>
+                <a class="footerlinks" href="https://www.medibuddy.in/doctors/online-consultation/generalphysician">General Meds</a><br>
+                <a class="footerlinks" href="https://www.medibuddy.in/doctors/online-consultation/diabetologist">Diabetes</a><br>
+                <a class="footerlinks" href="https://www.medibuddy.in/doctors/online-consultation/oncologist">Oncology</a><br>
+                <a class="footerlinks" href="https://www.medibuddy.in/doctors/online-consultation/cardiologist">Cardiology</a><br>
+              </div>
+              <div class="col col s6 m8">
+                <a class="footerlinks" href="health/pediatrics.html">Pediatrics</a><br>
+                <a class="footerlinks" href="https://www.medibuddy.in/doctors/online-consultation/psychiatrist">Psychiatry</a><br>
+                <a class="footerlinks" href="https://www.medibuddy.in/doctors/online-consultation/fertilityspecialist">Infertility</a><br>
+                <a class="footerlinks" href="health/orthopedics.html">Orthopedics</a><br>
+                <a class="footerlinks" href="https://www.medibuddy.in/doctors/online-consultation/neurologist">Neurology</a><br>
+                <a class="footerlinks" href="health/urology.html">Urology</a><br>
+                <a class="footerlinks" href="health/trichology.html">Trichology</a><br>
+                <a class="footerlinks" href="health/allspecialities.html">View All</a><br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="mobile">
+    <div class="inputSlideUp">
+      <div class="row">
+        <div class="col s11 no-pad-mar"></div>
+        <div class="col s1 no-pad-mar  pull-right">
+          <button class="closeBtn" onclick="removeInputSlideUp()"><i class="material-icons">close</i></button>
+        </div>
+      </div>
+      <div class='sliderCntnr'>
+        <div id='cntnr1'>
+          <!-- <div style="text-align: right;"><img onclick="closeModal('loginModal')" src="assets/images/newDesign/close-img.svg" alt="" style="cursor: pointer;width: 10px;"></div>
+          <br><br> -->
+          <!-- <div class="row"> -->
+          <div><img src="assets/images/newDesign/popup-mobile-img.svg" alt="" width="200.3px"></div>
+          <!-- </div> -->
+          <div class="row zero-botom">
+            <div class="col s12">
+              <div class="font-20 grey-col"> Welcome! </div>
+              <div class="font-20"><b> Sign in to continue </b></div>
+              <div class="input-field mob-input-width">
+                <input placeholder="Enter Mobile number" id="mobNum" type="number">
+                <!-- <label for="first_name">First Name</label> -->
+              </div>
+              <button class="loginBtn continue-btn mob-input-width disabled" type="submit">
+                <span class="font-15"> Continue </span>
+                <span class="arrow-span"> <img class="arrow-size" src="assets/images/newDesign/white_arrow.svg" alt="">
+                  <div class="loader hide">Loading...</div>
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <div id='cntnr2' width="220px">
+          <div class="font-20 bold-font"><b> OTP Verification </div>
+          <div class="font-12 grey-col"> One time password (OTP) sent via SMS to </div>
+          <br>
+          <div class="mobNum bold-font font-16">+91-<mob></mob> &nbsp;<i onclick="showMobCntnr()"
+              class="material-icons greenTxt">create</i></div>
+          <div class="input-field">
+            <input id="otp" placeholder="Enter OTP" type="number" onkeyup="watchInput(this)"
+              onblur="postEvent({eventName:'otp_field'});">
+            <!-- <label for="otp">Enter OTP</label> -->
+          </div>
+          <button class="otpBtn submitOtp continue-btn mob-input-width" type="submit">
+            <span class="font-15"> Submit </span>
+            <!-- <span class="arrow-span"> <img class="arrow-size" src="assets/images/newDesign/white_arrow.svg" alt=""> -->
+            <div class="loader hide">Loading...</div>
+          </button>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- footer mobile -->
+    <div class="footer-mob">
+      <ul class="collapsible footer-mob" data-collapsible="accordion" style="margin-bottom: 0px;box-shadow: none;">
+        <li class="text-ex socialLinks">
+          <div class="collapsible-header">
+            <span>ADC</span>
+            <span class="child-1"> <i class="material-icons">expand_more</i> </span>
+          </div>
+          <div class="collapsible-body font-10">
+            <span class="span-footer"><a href="health/about.html"> About us </a></span>
+            <span class="span-footer"> Press </span>
+            <span class="span-footer"> Careers </a></span>
+            <span class="span-footer">FAQ </a></span>
+            <span class="span-footer"> Patient Reviews
+              </a></span>
+          </div>
+        </li>
+        <li class="text-ex socialLinks">
+          <div class="collapsible-header">
+            <span> Service by City </span>
+            <span class="child-1"> <i class="material-icons">expand_more</i> </span>
+          </div>
+          <div class="collapsible-body" style="line-height: 2rem;">
+            <span class="span-footer"><a href="health/bangalore.html"> Bangalore </a></span>
+            <span class="span-footer"><a href="health/delhi.html"> Delhi </a></span>
+            <span class="span-footer"><a href="health/chennai.html"> Chennai </a></span>
+            <span class="span-footer"><a href="health/hyderabad.html"> Hyderabad </a></span>
+            <span class="span-footer"><a href="health/mumbai.html"> Mumbai </a></span>
+            <span class="span-footer"><a href="health/kolkata.html"> Kolkata </a></span>
+            <span class="span-footer"><a href="health/pune.html"> Pune </a></span>
+            <span class="span-footer"><a href="health/lucknow.html"> Lucknow </a></span>
+            <span class="span-footer"><a href="health/indore.html"> Indore </a></span>
+            <span class="span-footer"><a href="health/jaipur.html"> Jaipur </a></span>
+            <span class="span-footer"><a href="health/ahmedabad.html"> Ahmedabad </a></span>
+            <span class="span-footer"><a href="index.html"> View All </a></span>
+          </div>
+        </li>
+        <li class="text-ex socialLinks">
+          <div class="collapsible-header">
+            <span class="bold-font"> Service by Speciality </span>
+            <span class="child-1"> <i class="material-icons">expand_more</i> </span>
+          </div>
+          <div class="collapsible-body" style="line-height: 2rem;">
+            <span class="span-footer"><a href="https://www.medibuddy.in/doctors/online-consultation/sexologist"> Sexology </a></span>
+            <span class="span-footer"><a href="https://www.medibuddy.in/doctors/online-consultation/dermatologist"> Dermatology </a></span>
+            <span class="span-footer"><a href="https://www.medibuddy.in/doctors/online-consultation/gynecologist"> Gynecology </a></span>
+            <span class="span-footer"><a href="https://www.medibuddy.in/doctors/online-consultation/gastroenterologist"> Gastroenterology
+              </a></span>
+            <span class="span-footer"><a href="https://www.medibuddy.in/doctors/online-consultation/generalphysician"> General Meds </a></span>
+            <span class="span-footer"><a href="https://www.medibuddy.in/doctors/online-consultation/diabetologist">Diabetes </a></span>
+            <span class="span-footer"><a href="https://www.medibuddy.in/doctors/online-consultation/oncologist"> Oncology </a></span>
+            <span class="span-footer"><a href="https://www.medibuddy.in/doctors/online-consultation/cardiologist"> Cardiology </a></span>
+            <span class="span-footer"><a href="health/pediatrics.html"> Pediatrics </a></span>
+            <span class="span-footer"><a href="https://www.medibuddy.in/doctors/online-consultation/psychiatrist"> Psychiatry </a></span>
+            <span class="span-footer"><a href="https://www.medibuddy.in/doctors/online-consultation/fertilityspecialist"> Infertility </a></span>
+            <span class="span-footer"><a href="health/orthopedics.html"> Orthopedics </a></span>
+            <span class="span-footer"><a href="https://www.medibuddy.in/doctors/online-consultation/neurologist"> Neurology </a></span>
+            <span class="span-footer"><a href="health/urology.html"> Urology </a></span>
+            <span class="span-footer"><a href="health/trichology.html"> Trichology </a></span>
+            <span class="span-footer"><a href="health/allSpecialities.html"> View All </a></span>
+          </div>
+        </li>
+      </ul>
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <!-- GPay Modal Structure -->
+  <div id="modal1" class="modal gpay-modal">
+    <div class="modal-content gpay-modal-content">
+      <div class="center-align font-14"><b> Phone number sharing will help you create a secure account on automagnosis.in
+        </b></div>
+      <p class="phone-text-gpay">
+        To access app's features it's required of you to share this information.
+        Phone number will be used to communicate information related to any online consultation or purchases within app.
+      </p>
+      <br>
+      <div class="row center-align">
+        <div class="col s6">
+          <button class="gpay-exit" onclick="gpayExit()">
+            Exit
+          </button>
+        </div>
+        <div class="col s6 center-align">
+          <button class="gpay-allow" onclick="gpayAllow()">
+            Allow
+          </button>
+        </div>
+        <div class="col s12">
+          <div class="phone-text-gpay" style="margin-top: 4px;"> To Exit SPOT, Click on above close icon </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+
+</body>
+
+<noscript>
+  <img height="1" width="1" src="https://www.facebook.com/tr?id=663991460667557&amp;ev=PageView%20%20%20%20&amp;noscript=1" />
+</noscript>
+<script>
+  !function (f, b, e, v, n, t, s) {
+    if (f.fbq) return; n = f.fbq = function () {
+      n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    };
+    if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+    n.queue = []; t = b.createElement(e); t.async = !0;
+    t.src = v; s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s)
+  }(window, document, 'script',
+    '../connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '663991460667557');
+
+
+  window.ga = window.ga || function () {
+    (ga.q = ga.q || []).push(arguments)
+  };
+  ga.l = +new Date;
+  ga('create', 'UA-122808621-1', 'auto', {
+    'allowLinker': true
+  }, {
+    'domainName': 'docsapp.in'
+  });
+  ga('send', 'pageview');
+  if (navigator.sendBeacon) {
+    ga('set', 'transport', 'beacon');
+  }
+
+</script>
+<script async src="../microapps.google.com/apis/v1alpha/microapps.js"></script>
+
+<script src="../img1a.flixcart.com/linchpin-web/fk-platform-sdk/fkext-browser-min%401.0.14.js"></script>
+<script src="assets/js/phonePe-bundle.js"></script>
+<script src="assets/js/config.js"></script>
+
+<script type="text/javascript" src="assets/js/ua-parser.min.js"></script>
+<script src="assets/js/event.js"></script>
+<script async src="assets/js/mainv2.js"></script>
+<script>
+  try {
+    localStorage.setItem('lpv', 'L3.2');
+  } catch (err) {
+
+  }
+</script>
+<script async src="../www.google-analytics.com/analytics.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.collapsible').collapsible();
+    $(".button-collapse").sideNav({
+      menuWidth: 270,
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true
+    });
+    $('.modal').modal({
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+    });
+    $(':input[type="submit"]').prop('disabled', true);
+    $('input[type="number"]').keyup(function () {
+      if ($(this).val() != '' && $("#mobNum").val().length == 10) {
+        $('.loginBtn').css('background-color', '#00A62C');
+        $(':input[type="submit"]').prop('disabled', false);
+      } else {
+        $(':input[type="submit"]').prop('disabled', true);
+        $('.loginBtn').css('background-color', '#CBCBCB');
+        $("#mobNum").val($("#mobNum").val().slice(0, 10));
+      }
+      if ($(this).val() != '' && $("#otp").val().length == 4) {
+        $('.submitOtp').css('background-color', '#00A62C');
+        $(':input[type="submit"]').prop('disabled', false);
+      } else {
+        $(':input[type="submit"]').prop('disabled', true);
+        $('.submitOtp').css('background-color', '#CBCBCB');
+      }
+    });
+  });
+</script>
+
+</html>
